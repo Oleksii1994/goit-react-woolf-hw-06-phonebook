@@ -6,7 +6,7 @@ import Notiflix from 'notiflix';
 export const ContactItem = () => {
   const dispatch = useDispatch();
 
-  const contactsState = useSelector(state => state.contacts);
+  const contactsState = useSelector(state => state.contacts.contactsArr);
   const filterState = useSelector(state => state.filter);
 
   function getVisibleContacts() {

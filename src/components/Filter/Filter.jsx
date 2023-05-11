@@ -8,7 +8,6 @@ export const Filter = () => {
 
   const onFilter = e => {
     dispatch(setStatusFilter(e.target.value));
-    console.log(filter);
   };
 
   return (
