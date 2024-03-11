@@ -2,9 +2,10 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { ContactsList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 import { useSelector } from 'react-redux';
+import { getContacts } from 'redux/selectors';
 
 export function App() {
-  const stateContacts = useSelector(state => state.contacts.contactsArr);
+  const stateContacts = useSelector(getContacts);
 
   return (
     <div className="container">
