@@ -12,7 +12,7 @@ export const ContactItem = ({ id, name, number }) => {
   };
 
   return (
-    <ContactItemLi key={id}>
+    <ContactItemLi>
       {name}: {number}
       <DeleteBtn type="button" onClick={() => handleDelete({ id, name })}>
         Delete
