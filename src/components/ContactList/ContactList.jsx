@@ -17,7 +17,7 @@ export const ContactsList = () => {
   return (
     <ContactList>
       {getVisibleContacts(contactsState).map(({ id, name, number }) => (
-        <ContactItem key={id} name={name} number={number} />
+        <ContactItem key={id} id={id} name={name} number={number} />
       ))}
     </ContactList>
   );

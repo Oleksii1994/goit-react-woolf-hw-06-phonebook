@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import Notiflix from 'notiflix';
 import { useDispatch, useSelector } from 'react-redux';
+import { getContacts } from 'redux/selectors';
 import { addContact } from 'redux/contactsSlice';
 import { Form, Label, Input, SubmitButton } from './ContactForm.styled';
 
 export function ContactForm() {
   const dispatch = useDispatch();
-  const stateContacts = useSelector(state => state.contacts.contactsArr);
+  const stateContacts = useSelector(getContacts);
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
